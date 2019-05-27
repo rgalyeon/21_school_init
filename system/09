@@ -1,0 +1,6 @@
+#!/bin/bash
+# Exercise: What command lets you know who is connected to the System?
+
+#who show who is logged on
+#w - show who is logged on and what they are doing
+who

@@ -1,0 +1,8 @@
+#!/bin/bash
+# Exercise: List all real users on the VM
+
+UID_MIN=$(awk '/^UID_MIN/ {print $2}' /etc/login.defs); \
+UID_MAX=$(awk '/^UID_MAX/ {print $2}' /etc/login.defs); \
+getent passwd | awk -v MIN="$UID_MIN" -v MAX="$UID_MAX" -F ':' '{if (($3 >= MIN) && ($3 < MAX)) {print $1}}'
+
+# find all real users

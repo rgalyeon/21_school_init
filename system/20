@@ -1,0 +1,6 @@
+#!/bin/bash
+# Exercise: List all existing users on the VM
+
+awk -F: '{print $1}' /etc/passwd
+
+# find all existing users

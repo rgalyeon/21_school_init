@@ -1,0 +1,4 @@
+#!/bin/bash
+# Exercise: Find the command that kills ssh service
+
+pkill ssh

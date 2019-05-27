@@ -1,0 +1,4 @@
+#!/bin/bash
+# Exercise: What command can you use to rename your system?
+
+sudo hostname rgalyeon

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Exercise: Find the command that list all packages
+
+dpkg -l
+#or apt list

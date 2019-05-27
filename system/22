@@ -1,0 +1,5 @@
+#!/bin/bash
+# Exercise: Find the command that add a new local user
+
+adduser $1
+usermod -a -G sudo $1

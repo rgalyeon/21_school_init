@@ -1,0 +1,5 @@
+#!/bin/bash
+# Exercise: Figure out the PID of the SSHD service.
+
+pgrep -f sshd
+#ps aux | grep sshd | grep -v grep
