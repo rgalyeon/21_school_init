@@ -1,0 +1,7 @@
+#!/bin/bash
+# Exercise: Make the intra.42.fr address reroute to 46.19.122.85
+
+sudo echo "46.19.122.85		intra.42.fr" >> /etc/hosts
+
+# file /etc/hosts contains a pair "IP-adress - domain"
+# System will look into /etc/hosts and if pair is not found - access the server

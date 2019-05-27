@@ -1,0 +1,5 @@
+# Exercise: What file contains the local DNS entries?
+
+/etc/hosts
+
+# cash DNS server is used for local storage pairs "IP - domain" by the user

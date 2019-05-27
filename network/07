@@ -1,0 +1,12 @@
+#!/bin/sh
+# Exercise: Query an external DNS server on the slash16.org domain name (ie. : google
+#           8.8.8.8)
+
+nslookup slash16.org 8.8.8.8 |
+awk '{
+if ($1 == "Server:") {printf "%s         \x1B[1m\x1B[31m%s\x1B[0m\n", $1, $2}
+else if ($1 == "Name:") {printf "%s   %s\n", $1, $2; getline;
+	printf "%s \x1B[36m\x1B[1m%s\x1B[0m\n", $1, $2}
+else {print $0}
+}'
+
