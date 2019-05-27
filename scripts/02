@@ -1,0 +1,6 @@
+#!/bin/bash
+# Exercise: Write a script which delete an ACTIVE user on the VM.
+
+export NAME=$(whoami)
+su --preserve-environment -c 'passwd -l $NAME; \
+ps -fp $(pgrep -u $NAME); killall -KILL -u $NAME; userdel -r -f $NAME'
